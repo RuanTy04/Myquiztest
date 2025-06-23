@@ -13,7 +13,7 @@ function App() {
     const storedSessionIds = JSON.parse(localStorage.getItem("sessionQuestionIds") || "[]");
 
     const loadQuestions = async () => {
-      const res = await axios.get("http://localhost:5000/get-questions?count=30");
+      const res = await axios.get("https://myquiztest.onrender.com/get-questions?count=30");
       const newQuestions = res.data.filter(q => !storedSessionIds.includes(q.id));
       const selected = newQuestions.length >= 30 ? newQuestions.slice(0, 30) : res.data.slice(0, 30);
 
