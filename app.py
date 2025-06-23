@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load question bank
-FILE_PATH ="D:\Personal\福州大学\大三下\公文写作\公文写作与处理选择题.xlsx"
+FILE_PATH ="公文写作与处理选择题.xlsx"
 df = pd.read_excel(FILE_PATH, sheet_name="Sheet1")
 
 # Preprocess question list
